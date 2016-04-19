@@ -1,0 +1,19 @@
+version: 0.0
+
+containers:
+  main:
+    phases:
+      pre_build:
+        commands:
+          - echo 'Inside CodeBuild Source Directory'
+      during_build:
+        commands:
+          - echo 'Compiling the Python Code'
+          - python HelloWorld_tst.py
+      post_build:
+        commands:
+          - echo "Would deploy here"
+    artifacts:
+      type: zip
+      files:
+        - 'HelloWorld.py'
