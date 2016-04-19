@@ -5,7 +5,7 @@ containers:
     phases:
       pre_build:
         commands:
-          - echo 'Inside CodeBuild Source Directory'
+          - echo 'Inside Python Source Directory'
       during_build:
         commands:
           - echo 'Compiling the Python Code'
